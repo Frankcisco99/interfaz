@@ -1,6 +1,12 @@
 {
-    "errores":[
-        {"error": "1L", "desc": "error 1"},
-        {"error": "2L", "desc": "error 2"}
+    "errores": [
+        {
+            "codigo": "P2122",
+            "desc": "Sensor de posición del acelerador proporciona voltaje bajo"
+        },
+        {
+            "codigo": "P4045",
+            "desc":"Sensor de posición del pedal de freno envia señales fuera de rango"
+        }
     ]
 }
