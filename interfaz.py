@@ -1,29 +1,19 @@
-import tkinter as tk
-import json
+import tkinter
+from tkinter import ttk
 
-with open('errores.json','r') as file:
-    data = json.load(file)
+ventana = tkinter.Tk()
+ventana.title("Codigos de error")
 
-def obtenerDesc():
-    print("Hola")
-#Crear ventana del programa
-ventana = tk.Tk() #crear pantalla
-ventana.title("Scanner OBD")
-# ventana.geometry("500x300")
-ventana.resizable(0,0)
+#titulo 
+titulo = ttk.Label(ventana,text="Ingresa el codigo", font="Calibri 24 bold")
+titulo.pack(pady= 10, padx=10)
 
-#mensaje
-codigo = tk.Label(ventana, text= "Ingrese el codigo de error:")
-codigo.pack(pady=10, padx=10)
-#cuadro de texto
-codigo_entry = tk.Entry(ventana)
-codigo_entry.pack(pady=10, padx=10)
-#boton
-buscar_btn = tk.Button(ventana, text="Buscar error", command=obtenerDesc)
-buscar_btn.pack(pady=10, padx=10)
+entrada_texto = ttk.Entry(ventana)
+entrada_texto.pack(pady=10,padx=10)
 
-descripcion = tk.Label(ventana, text="")
-descripcion.pack()
+btn_buscar = ttk.Button(ventana, text="Buscar codigo")
+btn_buscar.pack(pady=10, padx=10)
 
-ventana.mainloop() #mantendra ventana abierta
-
+desc_error = ttk.Label(ventana, text="")
+desc_error.pack(pady=10)
+ventana.mainloop()
